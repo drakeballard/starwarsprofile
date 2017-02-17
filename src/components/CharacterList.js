@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { setCurrentCharacter } from '../reducer/character/actions';
 
-const CharacterList = ({ characters }) =>
+const CharacterList = ({ characters, setCharacter }) =>
   <div id='character-list' className='col-md-6'>
     <h1>Characters</h1>
     <ul>
-      {characters.map(c =>
+      {characters.map((c, i) =>
         <li
-          key={c.name}
+          key={c.name} onClick={setCharacter(i + 1)}
         >
           {c.name}
         </li>
@@ -27,4 +28,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps)(CharacterList);
+export default connect(mapStateToProps, mapDispatchToProps)(CharacterList);

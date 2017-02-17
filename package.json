@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start":"webpack-dev-server --hot --inline --content-base ./src --open",
     "build": "webpack",
     "serve": "webpack-dev-server --hot --inline --content-base ./src --open"
   },

@@ -1,9 +1,9 @@
 import { SET_CHARACTERS } from './actions';
 
-const initalState = [];
+const initialState = [];
 
-export default (state = initalState, action) {
-  switch (action.type) {
+export default (state = initialState, action) => {
+  switch(action.type) {
     case SET_CHARACTERS:
       return action.characters;
     default:

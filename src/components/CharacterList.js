@@ -19,4 +19,12 @@ const mapStateToProps = ({ characters }) => ({
   characters,
 });
 
+const mapDispatchToProps = dispatch => ({
+  setCharacter(id) {
+    return () => {
+      dispatch(setCurrentCharacter(id));
+    }
+  }
+});
+
 export default connect(mapStateToProps)(CharacterList);

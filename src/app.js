@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'components/App.js';
+import App from './components/App.js';
 import { AppContainer } from 'react-hot-loader';
 
-require('index.html');
+require('./index.html');
 
-const container = document.getElementById('#app-container');
+const container = document.getElementById('app-container');
 
 ReactDOM.render(
   <AppContainer>
